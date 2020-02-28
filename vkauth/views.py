@@ -14,7 +14,7 @@ def vkcode(request):
             + 'client_id=7337548'
             + '&client_secret=dmWncA4NzaFuuP6RabxX'
             + '&code=' + str(code) 
-            + '&redirect_uri=http://178.128.152.204/auth/vkcode')
+            + '&redirect_uri=http://178.128.152.204:8000/auth/vkcode')
         jsonResponse = response.json()
         if 'access_token' in jsonResponse.keys():
             accessToken = jsonResponse['access_token']
