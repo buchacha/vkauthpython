@@ -14,7 +14,7 @@ def friends(request):
     curUser = request.user
     try:
         userDataObj = get_object_or_404(UserData, user=curUser)
-        vk_session = vk_api.VkApi(token=userDataObj.vk_token) # token security
+        vk_session = vk_api.VkApi(token=userDataObj.vk_token) 
         vk = vk_session.get_api()
 
         friendsIds = vk.friends.get()['items'][:5]

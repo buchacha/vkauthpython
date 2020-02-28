@@ -2,7 +2,6 @@
     <h1>Authorization {{ auth_status }}</h1>
     <p>Please log in</p> 
     {% if not user.is_authenticated %}
-        {% print('high') %}
         <a href="https://oauth.vk.com/authorize?client_id=7337548&scope=friends&redirect_uri=http://178.128.152.204:8000/auth/vkcode">
             <button type="button" class="btn btn-primary">Authorization <i class="fa fa-vk"></i></button>
         </a>
