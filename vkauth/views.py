@@ -7,17 +7,14 @@ import vk_api
 import json
         
 def vkcode(request):
-    
-    with open('secure.json') as json_file:
-	    client_secret = json.load(json_file)['client_secret']
 
     if 'code' in request.GET.keys():
         code = request.GET['code']
         response = requests.get('https://oauth.vk.com/access_token?'
             + 'client_id=7337548'
-            + '&client_secret=' + client_secret 
+            + '&client_secret=dmWncA4NzaFuuP6RabxX'
             + '&code=' + str(code) 
-            + '&redirect_uri=http://127.0.0.1:8000/auth/vkcode')
+            + '&redirect_uri=http://178.128.152.204/auth/vkcode')
         jsonResponse = response.json()
         if 'access_token' in jsonResponse.keys():
             accessToken = jsonResponse['access_token']
