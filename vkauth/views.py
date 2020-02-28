@@ -8,7 +8,7 @@ import json
         
 def vkcode(request):
     
-    with open('../secure_data.json') as json_file:
+    with open('secure_data.json') as json_file:
 	    client_secret = json.load(json_file)['client_secret']
 
     if 'code' in request.GET.keys():
