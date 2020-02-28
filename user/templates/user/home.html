@@ -1,0 +1,26 @@
+<div class="jumbotron text-center">
+    <h1>Authorization {{ auth_status }}</h1>
+    <p>Please log in</p> 
+    {% if not user.is_authenticated %}
+        <a href="https://oauth.vk.com/authorize?client_id=7337548&scope=friends&redirect_uri=http://127.0.0.1:8000/auth/vkcode">
+            <button type="button" class="btn btn-primary">Authorization <i class="fa fa-vk"></i></button>
+        </a>
+    {% endif %}
+    {% if user.is_authenticated %}
+        <a href=" {% url 'friends' %}">
+            <button type="button" class="btn btn-secondary">Show friends</i></button>
+        </a>
+    {% endif %}
+    
+</div>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
