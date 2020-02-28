@@ -4,6 +4,8 @@
 *.pyc
 __pycache__/
 local_settings.py
+secure_data.json
 /media
 /static
 .vscode
+user/commands
